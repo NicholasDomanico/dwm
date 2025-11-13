@@ -6,8 +6,8 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=11" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=11";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -43,6 +43,7 @@ static const Rule rules[] = {
     { "pcmanfm-qt",  NULL,       NULL,       0,            0,           -1,         "" },
     { "okular",   NULL,       NULL,       0,            0,           -1,         "" },
     { "kcalc",    NULL,       NULL,       0,            1,           -1,         "" },
+    { "Nsxiv",    NULL,       NULL,       0,            1,           -1,         "" }
 };
 
 /* layout(s) */
@@ -80,7 +81,7 @@ static const char *explorercmd[] = { "pcmanfm-qt", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-    { MODKEY,                       XK_F5,    xrdb,           {.v = NULL } },
+    { MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
     { MODKEY,                       XK_e,      spawn,          {.v = explorercmd} },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },

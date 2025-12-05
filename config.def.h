@@ -1,4 +1,5 @@
 /* See LICENSE file for copyright and license details. */
+#include <X11/XF86keysym.h>
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -79,8 +80,19 @@ static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *explorercmd[] = { "pcmanfm-qt", NULL };
 
+/* audio commands */
+//static const char *raisevolume[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05+", "-l", "1.5", "NULL" };
+//static const char *lowervolume[] = { "wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@", "0.05-", "-l", "1.5", "NULL" };
+//static const char *togglemute[] = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", "NULL" };
+static const char *raisevolume[] = { "/home/nicholas/dwmblocks-async/scripts/update_volume.sh", "up", "NULL" };
+static const char *lowervolume[] = { "/home/nicholas/dwmblocks-async/scripts/update_volume.sh", "down", "NULL" };
+static const char *togglemute[] = { "/home/nicholas/dwmblocks-async/scripts/update_volume.sh", "mute", "NULL" };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+    { 0,                            XF86XK_AudioMute, spawn,   {.v = togglemute } },
+    { 0,                            XF86XK_AudioLowerVolume, spawn, {.v = lowervolume } },
+    { 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = raisevolume } },
     { MODKEY,                       XK_F5,     xrdb,           {.v = NULL } },
     { MODKEY,                       XK_e,      spawn,          {.v = explorercmd} },
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },

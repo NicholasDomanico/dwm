@@ -39,12 +39,13 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor   appicon*/
 	{ "Gimp",     NULL,       NULL,       0,            0,           -1,         "" },
-	{ "firefox",  NULL,       NULL,       0,            0,           -1,         "󰈹"  },
+	{ "firefox",  NULL,       NULL,       0,            0,           -1,         "󰈹" },
     { "kitty",    NULL,       NULL,       0,            0,           -1,         "" },
-    { "pcmanfm-qt",  NULL,       NULL,       0,            0,           -1,         "" },
+    { "pcmanfm-qt",  NULL,    NULL,       0,            0,           -1,         "" },
     { "okular",   NULL,       NULL,       0,            0,           -1,         "" },
     { "kcalc",    NULL,       NULL,       0,            1,           -1,         "" },
-    { "Nsxiv",    NULL,       NULL,       0,            1,           -1,         "" }
+    { "Nsxiv",    NULL,       NULL,       0,            1,           -1,         "" },
+    { "pavucontrol", NULL,    NULL,       0,            1,           -1,         "󰓃" }
 };
 
 /* layout(s) */

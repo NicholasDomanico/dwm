@@ -46,7 +46,8 @@ static const Rule rules[] = {
     { "okular",   NULL,       NULL,       0,            0,           -1,         "" },
     { "kcalc",    NULL,       NULL,       0,            1,           -1,         "" },
     { "Nsxiv",    NULL,       NULL,       0,            1,           -1,         "" },
-    { "pavucontrol", NULL,    NULL,       0,            1,           -1,         "󰓃" }
+    { "pavucontrol", NULL,    NULL,       0,            1,           -1,         "󰓃" },
+    { "St",    NULL,       "nmtui",       0,            1,           -1,         "󱄙" }
 };
 
 /* layout(s) */
